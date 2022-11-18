@@ -365,7 +365,7 @@ def main():
 
         for criteria in ['best-bleu']:
             # file = os.path.join(args.output_dir, 'checkpoint-{}/pytorch_model.bin'.format(criteria))
-            file = "CodeT5Colab/finetuned_models/summarize_python_codet5_base.bin"
+            file = "/content/CodeT5Colab/finetuned_models/summarize_python_codet5_base.bin"
             logger.info("Reload model from {}".format(file))
             model.load_state_dict(torch.load(file))
             eval_examples, eval_data = load_and_cache_gen_data(args, args.test_filename, pool, tokenizer, 'test',
